@@ -1,0 +1,59 @@
+#list = [1, 2, 3, 4]
+#list.append(55)
+#print(list)
+
+
+
+
+
+#mi_Tupla = ("Banana", "Manzana", "Cerveza")
+#print (mi_Tupla)
+
+
+
+# Mensaje de bienvenida
+print("---Bienvenido a Crear Tu Lista de Supernercado--- ")
+
+
+Nombre = input("Porfavor ingresa tu nombre ")
+
+print(f"Bienvenido {Nombre}")
+
+list = [input("Ingresa tu primer producto de tu lista ")]
+
+opcion = 1
+
+while opcion != 0:
+
+  decision = input("Deseas agregar más productos (SI/NO) ").upper()
+
+  if decision == "SI":
+
+    opcion = 1
+
+    list.append(input("Ingresa el siguiente producto de tu lista "))
+
+  else:
+
+    opcion = 0 
+
+    
+#Opcion para eliminar algun producto
+
+
+respuesta = input("¿Desea eleminar algun producto de la lista? (SI/NO) ").upper()
+if respuesta == "SI":
+    while True:
+        eliminar = input("Que prodcuto quiere eliminar (0 si no desea eliminar mas porductos): ")
+        if eliminar == "0" :
+            break
+        if eliminar in list:
+            list.remove(eliminar)
+            print(f"{eliminar} ha sido eliminado de tu lista")
+        else:
+            print(f"{eliminar} no esta en tu lista")
+            
+
+print(f"---Lista de {Nombre}---")
+print(f"{list}")
+
